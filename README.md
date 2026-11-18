@@ -83,6 +83,19 @@
             background: linear-gradient(180deg, transparent 0%, #FD0002 35%, #B30715 65%, transparent 100%);
             box-shadow: 0 0 18px #FD0002, 0 0 38px #B30715;
         }
+        img {
+            max-width: 100%;
+        }
+        .responsive-media {
+            width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+        }
+        @media (max-width: 640px) {
+            .responsive-media {
+                max-height: 60vh;
+            }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-alchemy-crimson selection:text-white">
@@ -146,7 +159,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 text-center">
             <!-- Emblema del Autor -->
             <div class="mx-auto mb-8 w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-gradient-to-b from-alchemy-wine to-alchemy-obsidian border-2 border-alchemy-crimson crimson-vein-glow flex items-center justify-center relative">
-                <img src="https://placehold.co/300x300/4C0B14/E6ECF5?text=MA" alt="Misael el Alquimista" class="w-full h-full object-cover rounded-full opacity-95" onerror="this.style.display='none'">
+                <img src="alchemist.jpg" alt="Misael el Alquimista" width="736" height="1307" class="w-full h-full object-cover rounded-full opacity-95" loading="eager" decoding="async" onerror="this.style.display='none'">
                 <span class="absolute -bottom-3 px-3.5 py-1 rounded-full bg-alchemy-crimson text-white font-mono text-[10px] font-bold uppercase tracking-widest shadow-crimson">
                     Alquimia Literaria & Código
                 </span>
@@ -532,7 +545,7 @@
     <div id="reader-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
         <div class="bg-alchemy-slate border border-alchemy-wine rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl my-8">
             <div class="relative h-56 sm:h-72 bg-alchemy-obsidian">
-                <img id="reader-img" src="" alt="Portada" class="w-full h-full object-cover">
+                <img id="reader-img" src="" alt="Portada" class="responsive-media w-full h-full object-cover">
                 <button onclick="closeReaderModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-alchemy-obsidian/90 hover:bg-alchemy-crimson text-white flex items-center justify-center transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -555,7 +568,7 @@
     <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
         <div class="bg-alchemy-slate border border-alchemy-wine rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl">
             <div class="relative bg-alchemy-obsidian flex items-center justify-center max-h-[70vh] overflow-hidden">
-                <img id="lb-img" src="" alt="Vista previa" class="w-full h-auto max-h-[70vh] object-contain">
+                <img id="lb-img" src="" alt="Vista previa" class="responsive-media w-full h-auto max-h-[70vh] object-contain">
                 <button onclick="closeLightbox()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-alchemy-obsidian/90 hover:bg-alchemy-crimson text-white flex items-center justify-center transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
@@ -618,7 +631,7 @@
                 title: "Las Hojas Negras del Jardín de Obsidiana",
                 category: "Fantasía Oscura",
                 date: "17 Nov 2026",
-                image: "https://placehold.co/800x500/4C0B14/E6ECF5?text=Hojas+Negras+de+Obsidiana",
+                image: "Every%20Book%20Holds%20a%20World.jpg",
                 content: "En el invernadero sellado bajo la torre norte, las plantas no beben luz solar sino la memoria de las tormentas antiguas. Sus nervaduras laten con un fulgor carmesí cada vez que alguien pronuncia un juramento roto.\n\nEl alquimista anotó en su cuaderno de hierro: 'Toda belleza que sobrevive a la oscuridad aprende a brillar desde adentro'."
             },
             {
@@ -626,7 +639,7 @@
                 title: "Nervadura de Sangre y Ceniza",
                 category: "Prosa Poética",
                 date: "13 Nov 2026",
-                image: "https://placehold.co/800x500/1E242D/FD0002?text=Nervadura+de+Sangre+y+Ceniza",
+                image: "time.jpg",
                 content: "No temas al invierno que desnuda las ramas; teme al verano perpetuo que nunca exige raíces profundas. Es en la noche cerrada donde la savia recuerda su verdadero color y asciende en silencio hacia la madrugada."
             },
             {
@@ -634,7 +647,7 @@
                 title: "Manual para Sobrevivir a los Profetas de la Productividad",
                 category: "Sátira",
                 date: "08 Nov 2026",
-                image: "https://placehold.co/800x500/101319/B30715?text=Satira+de+la+Productividad",
+                image: "wolf.jpg",
                 content: "Despierta a las 3:45 AM, bebe agua destilada con carbón activado, lee tres resúmenes de libros que jamás abrirás y publica un hilo explicando por qué dormir es un hábito obsoleto. Felicidades: has optimizado tu existencia hasta vaciarla por completo."
             },
             {
@@ -642,7 +655,7 @@
                 title: "Arquitectura del Código Solitario: Acode y Termux",
                 category: "Ensayos",
                 date: "02 Nov 2026",
-                image: "https://placehold.co/800x500/4C0B14/7A8CA9?text=Codigo+Solitario+Acode+y+Termux",
+                image: "games.jpg",
                 content: "Construir herramientas completas en un único archivo autónomo es un acto de resistencia frente a la complejidad innecesaria. Cuando dominas tus propios textos y tus propias líneas de código, tu obra permanece intacta sin depender de servidores ajenos."
             }
         ];
@@ -651,25 +664,25 @@
             {
                 id: 201,
                 title: "Nervadura Carmesí I",
-                image: "https://placehold.co/700x700/101319/FD0002?text=Nervadura+Carmesi+I",
+                image: "Cyberpunk%20Glitch.jpg",
                 description: "Estudio botánico nocturno sobre contraste de luz roja y sombra absoluta."
             },
             {
                 id: 202,
                 title: "El Matraz de Granate",
-                image: "https://placehold.co/700x700/4C0B14/E6ECF5?text=El+Matraz+de+Granate",
+                image: "alchemist.jpg",
                 description: "Ilustración conceptual para la antología de fantasía oscura."
             },
             {
                 id: 203,
                 title: "Acero y Niebla",
-                image: "https://placehold.co/700x700/1E242D/7A8CA9?text=Acero+y+Niebla",
+                image: "Rhine%20%E2%80%94%20The%20Quartz%20Throne.jpg",
                 description: "Composición minimalista inspirada en arquitectura brutalista nocturna."
             },
             {
                 id: 204,
                 title: "Sello del Alquimista",
-                image: "https://placehold.co/700x700/B30715/FFFFFF?text=Sello+del+Alquimista",
+                image: "Vice%20City%20Neon%20Vibes.jpg",
                 description: "Emblema oficial de la cuarta temporada del podcast Notas al Margen."
             }
         ];
@@ -679,21 +692,21 @@
                 id: 101,
                 name: "Grimorio: Hojas de Obsidiana (Libro)",
                 price: 280.00,
-                image: "https://placehold.co/600x450/4C0B14/E6ECF5?text=Grimorio+Hojas+de+Obsidiana",
+                image: "Every%20Book%20Holds%20a%20World.jpg",
                 description: "Antología de 30 relatos de fantasía oscura y prosa poética en edición física e ilustrado digital."
             },
             {
                 id: 102,
                 name: "Breviario Satírico para Tiempos Modernos",
                 price: 195.00,
-                image: "https://placehold.co/600x450/1E242D/FD0002?text=Breviario+Satirico",
+                image: "690528555410195009.jpg",
                 description: "Colección de ensayos afilados y sátira filosófica sobre el ruido contemporáneo."
             },
             {
                 id: 103,
                 name: "Print de Arte: 'Vena Carmesí' (A3)",
                 price: 360.00,
-                image: "https://placehold.co/600x450/101319/B30715?text=Print+Vena+Carmesi+A3",
+                image: "mirada.jpg",
                 description: "Lámina artística de colección impresa en papel algodón negro mate con tintas pigmentadas."
             }
         ];
@@ -725,6 +738,18 @@
         let posts = JSON.parse(localStorage.getItem(STORAGE_KEYS.POSTS)) || defaultPosts;
         let gallery = JSON.parse(localStorage.getItem(STORAGE_KEYS.GALLERY)) || defaultGallery;
         let products = JSON.parse(localStorage.getItem(STORAGE_KEYS.PRODUCTS)) || defaultProducts;
+        posts = posts.map(post => {
+            const fallback = defaultPosts.find(item => item.id === post.id);
+            return fallback && post.image.includes('placehold.co') ? { ...post, image: fallback.image } : post;
+        });
+        gallery = gallery.map(item => {
+            const fallback = defaultGallery.find(galleryItem => galleryItem.id === item.id);
+            return fallback && item.image.includes('placehold.co') ? { ...item, image: fallback.image } : item;
+        });
+        products = products.map(product => {
+            const fallback = defaultProducts.find(item => item.id === product.id);
+            return fallback && product.image.includes('placehold.co') ? { ...product, image: fallback.image } : product;
+        });
         let cart = JSON.parse(localStorage.getItem(STORAGE_KEYS.CART)) || [];
         let activeCategory = 'Todas';
         let currentEpisodeIdx = 0;
@@ -791,7 +816,7 @@
                 <article class="group rounded-3xl bg-alchemy-slate border border-alchemy-steel/60 hover:border-alchemy-crimson overflow-hidden flex flex-col justify-between transition-all shadow-obsidian">
                     <div>
                         <div class="relative h-48 overflow-hidden bg-alchemy-obsidian">
-                            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x500/4C0B14/E6ECF5?text=Misael+el+Alquimista'">
+                            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" onerror="this.src='Every%20Book%20Holds%20a%20World.jpg'">
                             <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-alchemy-wine/95 backdrop-blur-sm border border-alchemy-ruby font-mono text-[11px] font-semibold text-white">
                                 ${post.category}
                             </span>
@@ -847,7 +872,7 @@
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = gallery.map(item => `
                 <div onclick="openLightbox(${item.id})" class="group relative aspect-square rounded-2xl bg-alchemy-slate border border-alchemy-steel/60 hover:border-alchemy-crimson overflow-hidden cursor-pointer shadow-obsidian">
-                    <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/700x700/4C0B14/E6ECF5?text=Obra+Alquimica'">
+                    <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async" onerror="this.src='alchemist.jpg'">
                     <div class="absolute inset-0 bg-gradient-to-t from-alchemy-obsidian via-alchemy-obsidian/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                         <span class="font-serif text-sm font-bold text-alchemy-pearl">${item.title}</span>
                         <span class="font-mono text-[10px] text-alchemy-crimson mt-0.5"><i class="fa-solid fa-expand mr-1"></i>Ampliar en Lightbox</span>
@@ -1010,7 +1035,7 @@
                 <div class="rounded-3xl bg-alchemy-slate border border-alchemy-steel/60 hover:border-alchemy-crimson overflow-hidden flex flex-col justify-between transition-all shadow-obsidian">
                     <div>
                         <div class="relative h-48 bg-alchemy-obsidian overflow-hidden">
-                            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x450/4C0B14/E6ECF5?text=Artefacto'">
+                            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover" loading="lazy" decoding="async" onerror="this.src='Every%20Book%20Holds%20a%20World.jpg'">
                             <span class="absolute bottom-3 right-3 px-3 py-1 rounded-xl bg-alchemy-wine/95 border border-alchemy-crimson font-mono text-sm font-bold text-white shadow-crimson-sm">
                                 $${Number(prod.price).toFixed(2)}
                             </span>
@@ -1151,7 +1176,7 @@
             const file = document.getElementById('post-image-file').files[0];
             const url = document.getElementById('post-image-url').value.trim();
 
-            let image = 'https://placehold.co/800x500/4C0B14/E6ECF5?text=Misael+el+Alquimista';
+            let image = 'Every%20Book%20Holds%20a%20World.jpg';
             if (file) image = await readFileAsBase64(file);
             else if (url) image = url;
 
@@ -1178,7 +1203,7 @@
             const file = document.getElementById('gal-image-file').files[0];
             const url = document.getElementById('gal-image-url').value.trim();
 
-            let image = 'https://placehold.co/700x700/101319/FD0002?text=Obra+Visual';
+            let image = 'alchemist.jpg';
             if (file) image = await readFileAsBase64(file);
             else if (url) image = url;
 
@@ -1204,7 +1229,7 @@
             const file = document.getElementById('prod-image-file').files[0];
             const url = document.getElementById('prod-image-url').value.trim();
 
-            let image = 'https://placehold.co/600x450/4C0B14/E6ECF5?text=Artefacto+Alquimico';
+            let image = 'Every%20Book%20Holds%20a%20World.jpg';
             if (file) image = await readFileAsBase64(file);
             else if (url) image = url;
 
